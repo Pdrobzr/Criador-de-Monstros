@@ -1,0 +1,15 @@
+.formulario {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+}
+
+label {
+    margin-top: 50px;
+}
+
+#musculo {
+    width: 100px;
+    margin-bottom: 20px;
+}
