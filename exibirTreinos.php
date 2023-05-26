@@ -29,6 +29,7 @@ if (isset($_POST['btn-visualizar'])) {
 </head>
 
 <body>
+    <div style="margin-top:60px;">
     <table class="table">
         <tr>
             <th scope="col">Nome do Exercicio</th>
@@ -53,7 +54,7 @@ if (isset($_POST['btn-visualizar'])) {
             </tr>
         <?php } ?>
     </table>
-
+        </div>
 </body>
 
 </html>

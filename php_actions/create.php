@@ -11,6 +11,7 @@
         $idUsuario = $_SESSION['id_usuario'];
         $pdoTeste = new Treino();
         $pdoTeste->inserirNovoTreino($nomeMusculo, $nomeExercicio, $qtRepeticoes, $qtSeries, $idUsuario);
-        
+        echo "<script>alert('Exercício adicionado com sucesso!')</script>";
+        echo "<script> window.location.href='http://localhost/pdo/Criador-de-Monstros/index.php'</script>";
     }
 ?>

@@ -23,7 +23,7 @@ require_once('php_actions/db_connect.php');
 </head>
 
 <body>
-
+        <div style="margin-top: 60px;">
         <form action="php_actions/create.php" method="POST">
             <label for="nomeMusculo">Musculo do Exercicio</label>
             <select name="nomeMusculo" id="nomeMusculo" class="form-select">
@@ -47,7 +47,7 @@ require_once('php_actions/db_connect.php');
             </div>
             <button type="submit" name="btn_enviar" class="btn btn-primary">Enviar</button>
         </form>
-
+            </div>
 
 </body>
 
