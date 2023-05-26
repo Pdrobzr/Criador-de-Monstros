@@ -10,8 +10,6 @@
 
         if($autenticar){
             session_start();
-            $_SESSION['id_usuario'] = $dados['id_usuario'];
-            $_SESSION['logado'] = true;
             echo "<script> alert('Login efetuado com sucesso!')</script>";
             echo "<script> window.location.href='http://localhost/pdo/Criador-de-Monstros/index.php'</script>";
         } else {

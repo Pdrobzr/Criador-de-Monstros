@@ -20,7 +20,7 @@ require_once('php_actions/db_connect.php');
 <body>
     <div class="d-flex">
         <form action="php_actions/adicionarUsuario.php" method="POST">   
-            <div class="mb-3">
+            <div class="mb-3" style="margin-top: 60px;">
                 <label for="nome" class="form-label">Nome Completo</label>
                 <input type="text" class="form-control" id="nome" name="nome">
             </div>
