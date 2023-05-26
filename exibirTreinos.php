@@ -11,7 +11,7 @@ if (isset($_POST['btn-visualizar'])) {
         $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
     } else {
         echo "<script>alert('Treino vazio, adicione exercicios para esse musculo!')</script>";
-        echo "<script> window.location.href='http://localhost/pdo/index.php'</script>";
+        echo "<script> window.location.href='http://localhost/pdo/Criador-de-Monstros/index.php'</script>";
     }
 } else {
     header("Location: index.php");

@@ -10,6 +10,6 @@
         $pdoTeste = new Treino();
         $pdoTeste->inserirNovoTreino($nomeMusculo, $nomeExercicio, $qtRepeticoes, $qtSeries);
         echo "<script>alert('Exercício adicionado com sucesso!')</script>";
-        echo "<script> window.location.href='http://localhost/pdo/index.php'</script>";
+        echo "<script> window.location.href='http://localhost/pdo/Criador-de-Monstros/index.php'</script>";
     }
 ?>

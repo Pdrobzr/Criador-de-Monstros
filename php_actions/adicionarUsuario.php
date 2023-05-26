@@ -12,10 +12,10 @@
 
         if($novoUsuario){
             echo "<script>alert('Usuário cadastrado com sucesso!')</script>";
-            echo "<script> window.location.href='http://localhost/pdo/login.php'</script>";
+            echo "<script> window.location.href='http://localhost/pdo/Criador-de-Monstros/index.php'</script>";
         } else {
             echo "<script>alert('Erro! Usuário já cadastrado!')</script>";
-            echo "<script> window.location.href='http://localhost/pdo/cadastro.php'</script>";
+            echo "<script> window.location.href='http://localhost/pdo/Criador-de-Monstros/index.php'</script>";
         }
     }
 ?>

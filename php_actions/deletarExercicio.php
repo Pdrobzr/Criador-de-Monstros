@@ -6,7 +6,7 @@
         $treino = new Treino();
         $treino->deletarExercicio($id);
         echo "<script>alert('Exercício deletado com sucesso!')</script>";
-        echo "<script> window.location.href='http://localhost/pdo/index.php'</script>";
+        echo "<script> window.location.href='http://localhost/pdo/Criador-de-Monstros/index.php'</script>";
         
     }
 ?>
