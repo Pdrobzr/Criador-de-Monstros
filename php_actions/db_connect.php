@@ -3,7 +3,7 @@
         public $pdo;
         
         public static function realizarConexao(){
-            return $pdo = new PDO("mysql:host=localhost; dbname=bdfornecedor;chasert=utf-8", 'root', '');
+            return $pdo = new PDO("mysql:host=localhost; dbname=dbfornecedor;chasert=utf-8", 'root', '');
         }
     }
 ?>
