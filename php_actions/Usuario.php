@@ -18,7 +18,7 @@ class Usuario extends DbConnect
                 return true;
             }
         } catch (PDOException $e) {
-            echo "Erro com o banco de dados: ";
+            echo "Erro com o banco de dados: ".$e;
             
         }
     }
@@ -28,9 +28,10 @@ class Usuario extends DbConnect
             $pdo = DbConnect::realizarConexao();
             $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE nm_email = ?");
             $stmt->execute(array($email));
-            if($stmt->rowCount() > 0){
-                $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                $senhaSegura = $dados['cd_senha'];
+
+            if($stmt->rowCount() == 1){
+                $dados = $stmt->fetch(PDO::FETCH_OBJ);
+                $senhaSegura = $dados->cd_senha;
                 if(password_verify($senha, $senhaSegura)){
                     return true;
                 } else {
@@ -39,6 +40,8 @@ class Usuario extends DbConnect
             } else {
                 return false;
             }
+        } catch (PDOException $e) {
+            echo "Erro com o banco de dados: ".$e;
         }
     }
 

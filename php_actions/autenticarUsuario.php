@@ -15,8 +15,8 @@
             echo "<script> alert('Login efetuado com sucesso!')</script>";
             echo "<script> window.location.href='http://localhost/pdo/Criador-de-Monstros/index.php'</script>";
         } else {
-            echo "<script>alert('Email ou Senha invalidos!')</script>";
-            echo "<script> window.location.href='http://localhost/pdo/Criador-de-Monstros/login.php'</script>";
+            //echo "<script>alert('Email ou Senha invalidos!')</script>";
+            //echo "<script> window.location.href='http://localhost/pdo/Criador-de-Monstros/login.php'</script>";
         }
 
     }

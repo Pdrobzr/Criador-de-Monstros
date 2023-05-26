@@ -2,12 +2,12 @@
 
 class Treino extends DbConnect
 {
-    public static function inserirNovoTreino($nomeMusculo, $nomeExercicio, $qtRepeticoes, $qtSeries)
+    public static function inserirNovoTreino($nomeMusculo, $nomeExercicio, $qtRepeticoes, $qtSeries, $id_usuario)
     {
         try {
             $pdo = DbConnect::realizarConexao();
-            $stmt = $pdo->prepare("INSERT INTO exercicio VALUES (?, ?, ?, ?, null)");
-            $stmt->execute(array($nomeExercicio, $qtSeries, $qtRepeticoes, $nomeMusculo));
+            $stmt = $pdo->prepare("INSERT INTO exercicio VALUES (?, ?, ?, ?, null, ?)");
+            $stmt->execute(array($nomeExercicio, $qtSeries, $qtRepeticoes, $nomeMusculo, $id_usuario));
         } catch (PDOException $e) {
             echo "Ocorreu um erro: " . $e;
         }

@@ -18,7 +18,7 @@ require_once('php_actions/db_connect.php');
 </head>
 
 <body>
-
+    <div class="d-flex">
         <form action="php_actions/adicionarUsuario.php" method="POST">   
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome Completo</label>
@@ -34,7 +34,7 @@ require_once('php_actions/db_connect.php');
             </div>
             <button type="submit" name="btn-cadastrar" class="btn btn-primary">Cadastrar</button>
         </form>
-
+</div>
 </body>
 
 </html>

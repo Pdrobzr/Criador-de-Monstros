@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -55,10 +60,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <?php 
-    session_start();
-    $_SESSION['logado'] = true;
-    if(isset($_SESSION['logado'])) { ?>
+    <?php if($_SESSION['logado'] == true) { ?>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
       <li class="nav-item">
@@ -75,7 +77,7 @@
             <li><a class="dropdown-item" href="#">Conta</a></li>
             <li><a class="dropdown-item disabled" href="#">Configurações</a></li>
             <hr>
-            <li><a class="dropdown-item" href="#">Sair</a></li>
+            <li><a class="dropdown-item" href="php_actions/logout.php">Sair</a></li>
           </ul>
         </li>
       </ul>
@@ -85,16 +87,10 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="cadastro.php">Cadastrar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="login.php">Realizar Login</a>
         </li>
       </ul>
     </div>
