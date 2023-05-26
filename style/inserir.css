@@ -1,3 +1,27 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main{
+    width: 30vw;
+    height: 45vh;
+    background: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,.6);
+    border-radius: 5px;
+}
+
+
+
+
+
 #nomeMusculo, #nomeExercicio, #qtSeries, #qtRepeticoes {
     width: 200px;
 }

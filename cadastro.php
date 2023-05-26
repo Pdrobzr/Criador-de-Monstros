@@ -14,27 +14,47 @@ require_once('php_actions/db_connect.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/inserir.css">
+    <link rel="stylesheet" href="style/cadastro.css">
     <title>Cadastrar Usuário</title>
 </head>
 
 <body>
-    <div class="d-flex">
-        <form action="php_actions/adicionarUsuario.php" method="POST">   
-            <div class="mb-3" style="margin-top: 60px;">
-                <label for="nome" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="nome" name="nome">
+
+    <div class="main">
+
+        <div class="Card">
+            <div class="Card-left">
+                <img class="App-logo"  alt="Cadastro" />
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email">
+            <div class="Card-right">
+
+                <div class="login-box">
+                    <form action="php_actions/adicionarUsuario.php" method="POST">
+                        <h2>Cadastro</h2>
+                        <div class="user-box">
+                            <input type="text" id="nome" name="nome" required>
+                            <label htmlFor="name">Nome Completo</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" id="email" name="email" required>
+                            <label htmlFor="name">Email</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="password" id="senha" name="senha" required>
+                            <label htmlFor="name">Senha</label>
+                        </div>
+
+                        <button type="submit" name="btn-cadastrar" class="btn btn-outline-primary">Cadastrar</button>
+                    </form>
+                </div>
             </div>
-            <div class="mb-3">
-                <label class="text" for="qtRepeticoes">Senha</label>
-                <input type="password" class="form-control" id="senha" name="senha">
-            </div>
-            <button type="submit" name="btn-cadastrar" class="btn btn-primary">Cadastrar</button>
-        </form>
-</div>
+        </div>
+
+    </div>
+
+
+
+
 </body>
 
 </html>

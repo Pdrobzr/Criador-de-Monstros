@@ -19,12 +19,15 @@ require_once('php_actions/db_connect.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/inserir.css">
+
     <title>Inserir Exercício</title>
 </head>
 
 <body>
-        <div style="margin-top: 60px;">
+    <div class="main">
         <form action="php_actions/create.php" method="POST">
+            <p class="h2">Criar treino</p>
+
             <label for="nomeMusculo">Musculo do Exercicio</label>
             <select name="nomeMusculo" id="nomeMusculo" class="form-select">
                 <?php
@@ -47,7 +50,7 @@ require_once('php_actions/db_connect.php');
             </div>
             <button type="submit" name="btn_enviar" class="btn btn-primary">Enviar</button>
         </form>
-            </div>
+    </div>
 
 </body>
 
