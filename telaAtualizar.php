@@ -25,36 +25,34 @@ $dados = $stmt->fetch(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/contaUsuario.css">
 
-    <title>Informações de Conta</title>
+    <title>Atualizar Informações</title>
 </head>
 
 <body>
     <div class="main">
 
         <div class="title">
-            <p class="h2">Conta  Usuário</p>
+            <p class="h2">Atualizar Dados</p>
         </div>
         
-        <form class="formulario">
+        <form class="formulario" action="php_actions/atualizarUsuario.php" method="POST">
         <hr>
-
            
             <div class="mb-3">
                 <label for="nomeExercicio" class="form-label">Nome</label>
-                <input type="text" class="form-control " disabled id="nomeExercicio" name="nome" placeholder=<?=$dados['nm_usuario']?>>
+                <input type="text" class="form-control " id="nomeExercicio" name="nome" value=<?=$dados['nm_usuario']?>>
             </div>
             
             <div class="mb-3">
                 <label for="nomeExercicio" class="form-label">Email</label>
-                <input type="text" class="form-control" id="nomeExercicio" disabled name="email" placeholder=<?=$dados['nm_email']?> >
+                <input type="text" class="form-control" id="nomeExercicio" name="email" value=<?=$dados['nm_email']?> >
             </div>
             <div class="mb-3">
                 <label for="qtSeries" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="qtSeries" name="senha" disabled placeholder=<?=$dados['cd_senha']?>>
+                <input type="password" class="form-control" id="qtSeries" name="senha" placeholder="Insira sua senha...">
             </div>
-            
-            <a href="php_actions/deletarUsuario.php" class="btn btn-danger">Deletar conta</a>
-            <a href="telaAtualizar.php"class="btn btn-warning">Alterar</a>
+            <input type="hidden" name="id" value="<?=$id?>">
+            <button type="submit" name="btn-atualizar" class="btn btn-warning">Alterar</button>
         </form>
     </div>
 

@@ -49,8 +49,13 @@ class Usuario extends DbConnect
     {
         try {
             $pdo = DbConnect::realizarConexao();
-            $stmt = $pdo->prepare("UPDATE usuarios SET nm_nome = ?, nm_email = ?, cd_senha = ? WHERE id_usuario = ?");
+            $stmt = $pdo->prepare("UPDATE usuarios SET nm_usuario = ?, nm_email = ?, cd_senha = ? WHERE id_usuario = ?");
             $stmt->execute(array($nome, $email, $senha, $id));
+            if($stmt->rowCount() == 1){
+                return true;
+            } else {
+                return false;
+            }
         } catch (PDOException $e) {
             echo "Erro com o banco de dados: " . $e;
         }
