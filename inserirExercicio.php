@@ -49,6 +49,7 @@ require_once('php_actions/db_connect.php');
                 <input type="text" class="form-control" id="qtRepeticoes" name="qtRepeticoes">
             </div>
             <button type="submit" name="btn_enviar" class="btn btn-primary">Enviar</button>
+            <button type="submit" name="btn_enviar" class="btn btn-primary">Enviar</button>
         </form>
     </div>
 
