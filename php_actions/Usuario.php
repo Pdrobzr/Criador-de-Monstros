@@ -18,21 +18,21 @@ class Usuario extends DbConnect
                 return true;
             }
         } catch (PDOException $e) {
-            echo "Erro com o banco de dados: ".$e;
+            echo "Erro com o banco de dados: " . $e;
         }
     }
 
-    public static function autenticarUsuario($email , $senha)
+    public static function autenticarUsuario($email, $senha)
     {
         try {
             $pdo = DbConnect::realizarConexao();
             $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE nm_email = ?");
             $stmt->execute(array($email));
 
-            if($stmt->rowCount() == 1){
+            if ($stmt->rowCount() == 1) {
                 $dados = $stmt->fetch(PDO::FETCH_OBJ);
                 $senhaSegura = $dados->cd_senha;
-                if(password_verify($senha, $senhaSegura)){
+                if (password_verify($senha, $senhaSegura)) {
                     return true;
                 } else {
                     return false;
@@ -41,19 +41,20 @@ class Usuario extends DbConnect
                 return false;
             }
         } catch (PDOException $e) {
-            echo "Erro com o banco de dados: ".$e;
+            echo "Erro com o banco de dados: " . $e;
         }
     }
 
-    public static function atualizarUsuario($nome, $email, $senha){
+    public static function atualizarUsuario($nome, $email, $senha, $id)
+    {
         try {
             $pdo = DbConnect::realizarConexao();
-            $stmt = $pdo->prepare("UPDATE usuarios SET nm_nome = ?, nm_email = ?, cd_senha = ?");
-            $stmt->execute(array($nome, $email, $senha));
-        } catch (PDOException $e){
-            echo "Erro com o banco de dados: ".$e;
+            $stmt = $pdo->prepare("UPDATE usuarios SET nm_nome = ?, nm_email = ?, cd_senha = ? WHERE id_usuario = ?");
+            $stmt->execute(array($nome, $email, $senha, $id));
+        } catch (PDOException $e) {
+            echo "Erro com o banco de dados: " . $e;
         }
     }
 
-    
+
 }

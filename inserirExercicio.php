@@ -26,7 +26,7 @@ require_once('php_actions/db_connect.php');
 <body>
     <div class="main">
         <form action="php_actions/create.php" method="POST">
-            <p class="h2">Criar treino</p>
+            <p class="h2">Inserir exercício</p>
 
             <label for="nomeMusculo">Musculo do Exercicio</label>
             <select name="nomeMusculo" id="nomeMusculo" class="form-select">
