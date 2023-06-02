@@ -61,5 +61,19 @@ class Usuario extends DbConnect
         }
     }
 
+    public static function deletarUsuario($id){
+        try{
+            $pdo = DbConnect::realizarConexao();
+            $stmt = $pdo->prepare("DELETE FROM usuarios WHERE id_usuario = ?");
+            $stmt->execute(array($id));
+            if($stmt->rowCount() == 1){
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e){
+            echo "Erro com o banco de dados: ". $e;
+        }
+    }
 
 }
