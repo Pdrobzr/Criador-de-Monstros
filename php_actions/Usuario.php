@@ -51,7 +51,7 @@ class Usuario extends DbConnect
             $pdo = DbConnect::realizarConexao();
             $stmt = $pdo->prepare("UPDATE usuarios SET nm_usuario = ?, nm_email = ?, cd_senha = ? WHERE id_usuario = ?");
             $stmt->execute(array($nome, $email, $senha, $id));
-            if($stmt->rowCount() == 1){
+            if ($stmt->rowCount() == 1) {
                 return true;
             } else {
                 return false;
@@ -61,18 +61,22 @@ class Usuario extends DbConnect
         }
     }
 
-    public static function deletarUsuario($id){
-        try{
+    public static function deletarUsuario($id)
+    {
+        try {
             $pdo = DbConnect::realizarConexao();
-            $stmt = $pdo->prepare("DELETE FROM usuarios WHERE id_usuario = ?");
+            $stmt = $pdo->prepare("DELETE FROM exercicio WHERE id_usuario = ?");
             $stmt->execute(array($id));
-            if($stmt->rowCount() == 1){
+            $stm = $pdo->prepare("DELETE FROM usuarios WHERE id_usuario = ?");
+            $stm->execute(array($id));
+            if ($stm->rowCount() == 1) {
                 return true;
             } else {
                 return false;
             }
-        } catch (PDOException $e){
-            echo "Erro com o banco de dados: ". $e;
+
+        } catch (PDOException $e) {
+            echo "Erro com o banco de dados: " . $e;
         }
     }
 

@@ -53,7 +53,7 @@ $dados = $stmt->fetch(PDO::FETCH_ASSOC);
                 <input type="password" class="form-control" id="qtSeries" name="senha" disabled placeholder=<?=$dados['cd_senha']?>>
             </div>
             
-            <a href="php_actions/deletarUsuario.php" class="btn btn-danger">Deletar conta</a>
+            <a href="php_actions/deletarUsuario.php" class="btn btn-danger">Deletar conta</a>          
             <a href="telaAtualizar.php"class="btn btn-warning">Alterar</a>
         </form>
     </div>

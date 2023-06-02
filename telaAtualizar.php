@@ -40,16 +40,16 @@ $dados = $stmt->fetch(PDO::FETCH_ASSOC);
            
             <div class="mb-3">
                 <label for="nomeExercicio" class="form-label">Nome</label>
-                <input type="text" class="form-control " id="nomeExercicio" name="nome" value=<?=$dados['nm_usuario']?>>
+                <input type="text" class="form-control " required id="nomeExercicio" name="nome" value=<?=$dados['nm_usuario']?>>
             </div>
             
             <div class="mb-3">
                 <label for="nomeExercicio" class="form-label">Email</label>
-                <input type="text" class="form-control" id="nomeExercicio" name="email" value=<?=$dados['nm_email']?> >
+                <input type="text" class="form-control" required id="nomeExercicio" name="email" value=<?=$dados['nm_email']?> >
             </div>
             <div class="mb-3">
                 <label for="qtSeries" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="qtSeries" name="senha" placeholder="Insira sua senha...">
+                <input type="password" class="form-control" required id="qtSeries" name="senha" placeholder="Insira sua senha...">
             </div>
             <input type="hidden" name="id" value="<?=$id?>">
             <button type="submit" name="btn-atualizar" class="btn btn-warning">Alterar</button>
