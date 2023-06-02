@@ -64,6 +64,7 @@ class Usuario extends DbConnect
     public static function deletarUsuario($id)
     {
         try {
+            //deletar
             $pdo = DbConnect::realizarConexao();
             $stmt = $pdo->prepare("DELETE FROM exercicio WHERE id_usuario = ?");
             $stmt->execute(array($id));
