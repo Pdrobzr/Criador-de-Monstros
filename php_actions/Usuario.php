@@ -19,11 +19,11 @@ class Usuario extends DbConnect
             }
         } catch (PDOException $e) {
             echo "Erro com o banco de dados: ".$e;
-            
         }
     }
 
-    public static function autenticarUsuario($email , $senha){
+    public static function autenticarUsuario($email , $senha)
+    {
         try {
             $pdo = DbConnect::realizarConexao();
             $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE nm_email = ?");
@@ -41,6 +41,16 @@ class Usuario extends DbConnect
                 return false;
             }
         } catch (PDOException $e) {
+            echo "Erro com o banco de dados: ".$e;
+        }
+    }
+
+    public static function atualizarUsuario($nome, $email, $senha){
+        try {
+            $pdo = DbConnect::realizarConexao();
+            $stmt = $pdo->prepare("UPDATE usuarios SET nm_nome = ?, nm_email = ?, cd_senha = ?");
+            $stmt->execute(array($nome, $email, $senha));
+        } catch (PDOException $e){
             echo "Erro com o banco de dados: ".$e;
         }
     }

@@ -31,20 +31,20 @@
     <div class="carousel-inner">
       <div class="carousel-item active" style="background-image: url('imagens/gym1.jpg')">
         <div class="carousel-caption">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
+          <h5>First slide </h5>
+          <p></p>
         </div>
       </div>
       <div class="carousel-item" style="background-image: url('imagens/gym2.jpg')">
         <div class="carousel-caption">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
+          <h5>Second slide</h5>
+          <p></p>
         </div>
       </div>
       <div class="carousel-item" style="background-image: url('imagens/gym3.jpg')">
         <div class="carousel-caption">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+          <h5>Third slide </h5>
+          <p></p>
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@
 <!-- Page Content -->
 <section class="py-5">
   <div class="container">
-    <h1 class="fw-light">Half Page Image Slider</h1>
+    <h1 class="fw-light">Vire monstro!</h1>
     <p class="lead">The background images for the slider are set directly in the HTML using inline CSS. The images
       in this snippet are from <a href="https://unsplash.com">Unsplash</a>!</p>
   </div>

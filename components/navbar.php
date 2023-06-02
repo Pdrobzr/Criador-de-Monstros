@@ -1,4 +1,5 @@
 <?php
+  require_once('./php_actions/db_connect.php');
   session_start();
   
 ?>
@@ -60,7 +61,14 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <?php if($_SESSION['logado'] == true) { ?>
+    <?php if($_SESSION['logado'] == true) {
+      $id = $_SESSION['id_usuario'];
+      $pdo = DbConnect::realizarConexao();
+      $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE id_usuario = ?");
+      $stmt->execute(array($id));
+      $dados = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+      ?>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
       <li class="nav-item">
@@ -71,7 +79,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Pedro Vinicius
+            <?=$dados['nm_usuario'];?>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Conta</a></li>
