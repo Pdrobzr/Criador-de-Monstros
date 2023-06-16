@@ -31,19 +31,19 @@
     <div class="carousel-inner">
       <div class="carousel-item active" style="background-image: url('imagens/gym1.jpg')">
         <div class="carousel-caption">
-          <h5>First slide </h5>
+         
           <p></p>
         </div>
       </div>
       <div class="carousel-item" style="background-image: url('imagens/gym2.jpg')">
         <div class="carousel-caption">
-          <h5>Second slide</h5>
+          
           <p></p>
         </div>
       </div>
       <div class="carousel-item" style="background-image: url('imagens/gym3.jpg')">
         <div class="carousel-caption">
-          <h5>Third slide </h5>
+          
           <p></p>
         </div>
       </div>
@@ -63,7 +63,6 @@
 <section class="py-5">
   <div class="container">
     <h1 class="fw-light">Vire monstro!</h1>
-    <p class="lead">The background images for the slider are set directly in the HTML using inline CSS. The images
-      in this snippet are from <a href="https://unsplash.com">Unsplash</a>!</p>
+    <p class="lead">Seja Bem Vindo(a) A Make Monsters aqui você ira conseguir controlar o seu treino da molher maneira!</p>
   </div>
 </section>

@@ -8,7 +8,7 @@ body{
 
 .formulario{
     width: 30vw;
-    height: 50vh;
+    height: 20vh;
     background: #ffff;
     display: flex;
     flex-direction: column;
