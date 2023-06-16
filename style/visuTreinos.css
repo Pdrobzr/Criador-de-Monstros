@@ -1,10 +1,23 @@
-.formulario {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column;
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
+.formulario{
+    width: 30vw;
+    height: 50vh;
+    background: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,.6);
+    border-radius: 5px;
+}
 label {
     margin-top: 50px;
 }
@@ -16,4 +29,8 @@ label {
 
 
 
-
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
